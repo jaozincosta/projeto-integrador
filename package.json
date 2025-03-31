@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "prepare": "chmod +x ./node_modules/.bin/ng"
+    "prepare": "chmod +x ./node_modules/.bin/ng",
+    "postinstall": "npm run prepare"
   },
   "private": true,
   "dependencies": {
