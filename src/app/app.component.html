@@ -1,0 +1,11 @@
+<ng-container *ngIf="isLayoutVisible()">
+  <app-header></app-header>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="isLayoutVisible()">
+  <app-carrossel></app-carrossel>
+  <app-element></app-element>
+  <app-footer></app-footer>
+</ng-container>

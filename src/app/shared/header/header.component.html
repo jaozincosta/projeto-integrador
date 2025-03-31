@@ -1,0 +1,48 @@
+<header>
+  <div class="container-header">
+    <div class="logo">
+      <a href="/" aria-label="Página inicial">
+        <img src="assets/img/marca.png" alt="Logo da Loja" />
+      </a>
+    </div>
+
+    <form class="barra-pesquisa" action="/pesquisar" method="get" role="search">
+      <input
+        type="text"
+        name="q"
+        placeholder="O que você quer encontrar?"
+        aria-label="Buscar produto"
+      />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <nav class="icones-header" aria-label="Ações do usuário">
+      <a [routerLink]="['/entrar']" aria-label="Login">
+        <img class="icon" src="assets/img/pessoa.png" alt="Ícone de login" />
+      </a>
+      <a href="#" aria-label="Favoritos">
+        <img class="icon" src="assets/img/coracao.png" alt="Ícone de favoritos" />
+      </a>
+      <a href="#" aria-label="Carrinho de compras">
+        <img class="icon" src="assets/img/carrinho-de-compras.png" alt="Ícone do carrinho" />
+      </a>
+      <a [routerLink]="'/manutencao'" aria-label="Manutenção">
+        <img class="icon" src="assets/img/configuracoes.png" alt="Ícone de manutenção" />
+      </a>
+    </nav>
+  </div>
+
+  <nav class="navegacao-principal" aria-label="Categorias principais">
+    <ul>
+      <li><a href="#">NOVIDADES</a></li>
+      <li><a href="#">MASCULINO</a></li>
+      <li><a href="#">FEMININO</a></li>
+      <li><a href="#">INFANTIL</a></li>
+      <li><a href="#">SPORT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1 class="desconto">20% OFF Em Sua Primeira Compra</h1>
+</section>

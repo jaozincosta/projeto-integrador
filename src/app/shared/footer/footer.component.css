@@ -1,0 +1,38 @@
+footer{
+    display: flex;
+    background-color: #FFAB6A;
+    height: 300px;
+
+}
+.footer1{
+    padding: 10px;
+    font-family: 'roboto mono' monospace;
+}
+.footer2{
+    padding: 10px;
+    font-family: 'roboto mono' monospace;
+}
+.footer3{
+    padding: 10px;
+    font-family: 'roboto mono' monospace;
+}
+.footer4{
+    padding: 60px;
+    font-family: 'roboto mono' monospace;
+}
+.footerIMG{
+    display: flex;
+    padding: 120px;
+    height: auto;
+    margin: 10px;
+    position: relative;
+    left: 10%;
+    top: -125px;
+    
+}
+section{
+    display: flex;
+    background-color: #EBEAE7;
+    text-align: center;
+}
+

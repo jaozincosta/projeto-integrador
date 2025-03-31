@@ -1,0 +1,28 @@
+<header>
+  <a [routerLink]="'/'" class="logo-voltar" aria-label="Voltar para a home">
+    <img src="assets/img/marca.png" alt="Logo da loja" />
+  </a>
+  <nav class="navegação">
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviço</a>
+    <a href="#">Contato</a>
+    <a routerLink="/entrar" class="botLogin">Entrar</a>
+  </nav>
+</header>
+
+<div class="boxLogin">
+  <h2>Conta</h2>
+  <form>
+    <input type="text" class="input-box" placeholder="Nome completo" required />
+    <input type="text" class="input-box" placeholder="Usuário" required />
+    <input type="password" class="input-box" placeholder="Senha" required />
+    <input
+      type="password"
+      class="input-box"
+      placeholder="Confirme a Senha"
+      required
+    />
+    <button type="submit" class="btn">Criar</button>
+  </form>
+</div>
