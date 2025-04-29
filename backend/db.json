@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Tenis Air force",
+      "preco": 999.99,
+      "estoque": 12
+    },
+    {
+      "id": "2",
+      "nome": "Tenis Jordan",
+      "preco": 699.9,
+      "estoque": 45
+    },
+    {
+      "id": "3",
+      "nome": "Tenis Adidas",
+      "preco": 299.99,
+      "estoque": 30
+    },
+    {
+      "id": 0,
+      "nome": "Tenis Air Force 1",
+      "preco": 799.9,
+      "estoque": 21
+    }
+  ]
+}

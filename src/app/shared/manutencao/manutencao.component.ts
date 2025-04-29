@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ProdutosService } from '../../services/produtos.service';
 
 interface Produto {
   id: number;
@@ -21,53 +22,52 @@ export class ManutencaoComponent implements OnInit {
   produtos: Produto[] = [];
   novoProduto: Produto = this.resetProduto();
   editandoId: number | null = null;
-  idCounter = 1;
+
+  constructor(private produtosService: ProdutosService) {}
 
   ngOnInit(): void {
-    const produtosSalvos = localStorage.getItem('produtos');
-    if (produtosSalvos) {
-      this.produtos = JSON.parse(produtosSalvos);
-      const ids = this.produtos.map((p) => p.id);
-      this.idCounter = ids.length > 0 ? Math.max(...ids) + 1 : 1;
-    }
+    this.carregarProdutos();
   }
 
-  adicionarOuAtualizarProduto() {
+  carregarProdutos(): void {
+    this.produtosService.listar().subscribe((data) => {
+      this.produtos = data;
+    });
+  }
+
+  adicionarOuAtualizarProduto(): void {
     if (this.editandoId !== null) {
-      const index = this.produtos.findIndex((p) => p.id === this.editandoId);
-      if (index !== -1) {
-        this.produtos[index] = { ...this.novoProduto, id: this.editandoId };
-      }
+      this.produtosService
+        .atualizar(this.editandoId, this.novoProduto)
+        .subscribe(() => {
+          this.carregarProdutos();
+          this.novoProduto = this.resetProduto();
+          this.editandoId = null;
+        });
     } else {
-      this.novoProduto.id = this.idCounter++;
-      this.produtos.push({ ...this.novoProduto });
+      this.produtosService.criar(this.novoProduto).subscribe(() => {
+        this.carregarProdutos();
+        this.novoProduto = this.resetProduto();
+      });
     }
-
-    this.salvarProdutos();
-    this.novoProduto = this.resetProduto();
-    this.editandoId = null;
   }
 
-  editar(produto: Produto) {
+  editar(produto: Produto): void {
     this.novoProduto = { ...produto };
     this.editandoId = produto.id;
   }
 
-  excluir(id: number) {
-    this.produtos = this.produtos.filter((p) => p.id !== id);
-    this.salvarProdutos();
-
-    if (this.editandoId === id) {
-      this.novoProduto = this.resetProduto();
-      this.editandoId = null;
-    }
-  }
-
-  salvarProdutos() {
-    localStorage.setItem('produtos', JSON.stringify(this.produtos));
+  excluir(id: number): void {
+    this.produtosService.deletar(id).subscribe(() => {
+      this.carregarProdutos();
+      if (this.editandoId === id) {
+        this.novoProduto = this.resetProduto();
+        this.editandoId = null;
+      }
+    });
   }
 
   resetProduto(): Produto {
-    return { id: 0, nome: '', preco: null as any, estoque: null as any };
+    return { id: 0, nome: '', preco: 0, estoque: 0 };
   }
 }
