@@ -1,0 +1,33 @@
+<a [routerLink]="'/'" class="logo-voltar" aria-label="Voltar para a home">
+  <img src="assets/img/marca.png" alt="Logo da loja" />
+</a>
+
+<section class="pagamento-container">
+  <h1>Tela de Pagamento</h1>
+
+  <form (ngSubmit)="realizarPagamento()">
+    <input
+      type="number"
+      name="valor"
+      [(ngModel)]="valor"
+      placeholder="Valor do pagamento"
+      required
+    />
+
+    <select name="metodo" [(ngModel)]="metodoPagamento" required>
+      <option value="" disabled selected>
+        Selecione o método de pagamento
+      </option>
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="pix">PIX</option>
+      <option value="boleto">Boleto</option>
+    </select>
+
+    <button type="submit">Pagar</button>
+  </form>
+
+  <div *ngIf="pago" class="mensagem-pagamento">
+    Pagamento realizado com sucesso!
+    <button (click)="resetarFormulario()">Novo Pagamento</button>
+  </div>
+</section>
