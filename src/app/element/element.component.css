@@ -59,7 +59,7 @@ s, p {
     border: 2px solid black;
 }
 .produtos-container2 {
-    display: inline-flex; 
+    display: flex; 
     gap: 52px; 
     justify-content: center; 
     margin-top: 50px; 

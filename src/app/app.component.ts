@@ -15,8 +15,8 @@ import { NgIf } from '@angular/common';
     HeaderComponent,
     CarrosselComponent,
     FooterComponent,
-    ElementComponent,
-  ],
+    ElementComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -24,7 +24,7 @@ export class AppComponent {
   constructor(public router: Router) {}
 
   isLayoutVisible(): boolean {
-    const rotasEscondidas = ['/entrar', '/manutencao', '/registrar'];
+    const rotasEscondidas = ['/entrar', '/manutencao', '/registrar', '/favoritos'];
     return !rotasEscondidas.includes(this.router.url);
   }
 }

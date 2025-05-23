@@ -8,6 +8,7 @@ import { Produto } from './types/types';
 })
 export class ProdutosService {
   private readonly API = 'http://localhost:3000/produtos';
+  private readonly FAVORITOS_API = 'http://localhost:3000/favoritos';
 
   constructor(private http: HttpClient) {}
 
@@ -30,4 +31,8 @@ export class ProdutosService {
   deletar(id: number): Observable<void> {
     return this.http.delete<void>(`${this.API}/${id}`);
   }
+
+  listarFavoritos(): Observable<Produto[]> {
+  return this.http.get<Produto[]>(this.FAVORITOS_API);
+}
 }

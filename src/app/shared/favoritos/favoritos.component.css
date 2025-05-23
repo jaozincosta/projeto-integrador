@@ -1,0 +1,32 @@
+.titulo{
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.principal {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 13px; 
+    max-height: 80vh; 
+    padding: 16px;
+    gap: 40px;
+}
+
+.cardfavorito {
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+

@@ -7,8 +7,10 @@ import { ProdutosService } from '../../services/produtos.service';
 interface Produto {
   id: number;
   nome: string;
+  descricao: string;
   preco: number;
   estoque: number;
+  imagem: string;
 }
 
 @Component({
@@ -68,6 +70,6 @@ export class ManutencaoComponent implements OnInit {
   }
 
   resetProduto(): Produto {
-    return { id: 0, nome: '', preco: 0, estoque: 0 };
+    return { id: 0, nome: '', descricao: '' ,preco: 0, estoque: 0 ,imagem: ''};
   }
 }
