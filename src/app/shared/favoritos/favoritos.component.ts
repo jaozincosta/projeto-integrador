@@ -7,18 +7,28 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-favoritos',
-  imports: [HeaderComponent,RouterModule,CommonModule],
+  imports: [HeaderComponent, RouterModule, CommonModule],
   templateUrl: './favoritos.component.html',
   styleUrl: './favoritos.component.css'
 })
 export class FavoritosComponent implements OnInit {
   favoritos: Produto[] = [];
 
-  constructor(private produtosservice: ProdutosService) { }
+  constructor(private produtosService: ProdutosService) {}
 
   ngOnInit(): void {
-    this.produtosservice.listarFavoritos().subscribe((dados) => {
+    this.carregarFavoritos();
+  }
+
+  carregarFavoritos(): void {
+    this.produtosService.listarFavoritos().subscribe((dados) => {
       this.favoritos = dados;
+    });
+  }
+
+  removerFavorito(id: number): void {
+    this.produtosService.removerFavorito(id).subscribe(() => {
+      this.favoritos = this.favoritos.filter(p => p.id !== id);
     });
   }
 }

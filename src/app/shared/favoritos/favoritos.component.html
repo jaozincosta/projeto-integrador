@@ -1,17 +1,18 @@
 <app-header></app-header>
-    <h1 class="titulo">Minha lista de desejos...</h1>
+<h1 class="titulo">Minha lista de desejos...</h1>
 
 <div class="principal">
-    @if (favoritos.length === 0) {
+  @if (favoritos.length === 0) {
     <div class="opcao">Nenhum favorito adicionado ainda.</div>
-    }
+  }
 
-    @for (item of favoritos; track item.id) {
+  @for (item of favoritos; track item.id) {
     <div class="cardfavorito">
-        <img [src]="item.imagem" alt="{{ item.nome }}" />
-        <h3>{{ item.nome }}</h3>
-        <p>{{ item.preco }}</p>
-        <button class="botao">Adicinar ao carrinho</button>
+      <img [src]="item.imagem" alt="{{ item.nome }}" />
+      <h3>{{ item.nome }}</h3>
+      <p>{{ item.preco }}</p>
+      <button class="botao">Adicionar ao carrinho</button>
+      <button class="botao-remover" (click)="removerFavorito(item.id)">Excluir</button>
     </div>
-    }
+  }
 </div>

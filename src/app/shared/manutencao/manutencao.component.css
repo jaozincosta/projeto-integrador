@@ -22,7 +22,7 @@
 
 .manutencao-container {
   width: 100%;
-  max-width: 700px;
+  max-width: 750px;
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
@@ -58,6 +58,7 @@ form button {
 button {
   padding: 0.5rem 1rem;
   background-color: #0da7d9;
+  margin: 3px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -89,4 +90,7 @@ th {
 
 td button {
   margin-right: 0.5rem;
+}
+.excluir{
+  background-color: red;
 }

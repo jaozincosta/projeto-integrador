@@ -3,7 +3,7 @@
     {
       "id": "1",
       "nome": "Tenis Air force",
-      "descricao" : "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
@@ -11,10 +11,10 @@
     {
       "id": "2",
       "nome": "Tenis ultra Energy",
-      "descricao": "",
-      "preco": 699.9,
+      "descricao": "qualquer",
+      "preco": 700,
       "estoque": 45,
-      "imagem": ""
+      "imagem": "nada"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "descricao": "",
       "preco": 299.99,
       "estoque": 30,
-      "imagem" : ""
+      "imagem": ""
     },
     {
       "id": "4",
@@ -30,49 +30,88 @@
       "descricao": "",
       "preco": 799.9,
       "estoque": 21,
-      "imagem" : ""
+      "imagem": ""
+    },
+    {
+      "id": "8f60",
+      "nome": "teste",
+      "descricao": "testando",
+      "preco": 1,
+      "estoque": 5,
+      "imagem": "nadadedemais"
     }
   ],
   "favoritos": [
     {
       "id": "1",
       "nome": "Tenis Air force",
-      "descricao" : "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
     },
     {
-      "id": "1",
+      "id": "2",
       "nome": "Tenis Air force",
-      "descricao" : "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
     },
-     {
-      "id": "1",
+    {
+      "id": "3",
       "nome": "Tenis Air force",
-      "descricao" : "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
     },
-     {
-      "id": "1",
+    {
+      "id": "4",
       "nome": "Tenis Air force",
-      "descricao" : "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
     },
-     {
-      "id": "1",
+    {
+      "id": "5",
       "nome": "Tenis Air force",
-      "descricao" : "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
+    },
+    {
+      "id": "6",
+      "nome": "Tenis Air force",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "preco": 999.99,
+      "estoque": 12,
+      "imagem": "assets/img/tenis7.png"
+    },
+    {
+      "id": "7",
+      "nome": "Tenis Air force",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "preco": 999.99,
+      "estoque": 12,
+      "imagem": "assets/img/tenis7.png"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "95e7",
+      "nomeCompleto": "vitorio",
+      "usuario": "teste",
+      "senha": "123"
+    },
+    {
+      "id": "900",
+      "nomeCompleto": "Fulano silva",
+      "usuario": "admin",
+      "senha": "1234",
+      "tipo": "admin"
     }
   ]
 }

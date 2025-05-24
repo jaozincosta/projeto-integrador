@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ProdutosService } from '../../services/produtos.service';
 
 interface Produto {
-  id: number;
+  id?: number; // <- agora o id é opcional
   nome: string;
   descricao: string;
   preco: number;
@@ -56,7 +56,7 @@ export class ManutencaoComponent implements OnInit {
 
   editar(produto: Produto): void {
     this.novoProduto = { ...produto };
-    this.editandoId = produto.id;
+    this.editandoId = produto.id!;
   }
 
   excluir(id: number): void {
@@ -70,6 +70,6 @@ export class ManutencaoComponent implements OnInit {
   }
 
   resetProduto(): Produto {
-    return { id: 0, nome: '', descricao: '' ,preco: 0, estoque: 0 ,imagem: ''};
+    return {nome: '', descricao: '' ,preco: 0, estoque: 0 ,imagem: ''};
   }
 }

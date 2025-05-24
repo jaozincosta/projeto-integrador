@@ -1,6 +1,11 @@
 .titulo{
     text-align: center;
 }
+.opcao{text-align: center;
+    font-size: 2rem;
+    margin-top: 14%;
+    color: orange;
+}
 
 button {
     background-color: #007bff;
@@ -28,5 +33,9 @@ button {
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
+}
+.botao-remover{
+    background-color: red;
+    margin-left: 42%;
 }
 
