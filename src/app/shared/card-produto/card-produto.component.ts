@@ -8,7 +8,6 @@ export interface Produto {
   precoAtual: number;
   parcelas: string;
   desconto: number;
-  destaque?: string;
   freteGratis?: boolean;
 }
 

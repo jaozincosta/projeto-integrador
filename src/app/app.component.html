@@ -5,6 +5,8 @@
 <router-outlet></router-outlet>
 
 <ng-container *ngIf="mostrarLayout">
+  <h2 class="titulo-central">PROMOÇÕES</h2>
+
   <div class="cards-container">
     <app-card-produto
       [produto]="{
@@ -127,5 +129,6 @@
     >
     </app-card-produto>
   </div>
+  <app-categorias></app-categorias>
   <app-footer></app-footer>
 </ng-container>

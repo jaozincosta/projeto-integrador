@@ -1,0 +1,11 @@
+<section class="categorias-container">
+  <h2 class="titulo">CATEGORIAS</h2>
+  <div class="categorias-lista">
+    <div class="categoria-item" *ngFor="let item of categorias">
+      <div class="circulo">
+        <img [src]="item.imagem" [alt]="item.nome" />
+      </div>
+      <p>{{ item.nome }}</p>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" *ngIf="produto">
   <img [src]="produto.imagem" [alt]="produto.nome" class="imagem-produto" />
 
   <div class="desconto-label" *ngIf="produto.desconto">
