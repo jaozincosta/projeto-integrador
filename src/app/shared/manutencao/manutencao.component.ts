@@ -5,10 +5,13 @@ import { RouterModule } from '@angular/router';
 import { ProdutosService } from '../../services/produtos.service';
 
 interface Produto {
-  id?: number; // <- agora o id é opcional
+  id?: number; 
   nome: string;
   descricao: string;
   preco: number;
+  preco_antigo: number;
+  avaliacao: string;
+  genero: string;
   estoque: number;
   imagem: string;
 }
@@ -70,6 +73,6 @@ export class ManutencaoComponent implements OnInit {
   }
 
   resetProduto(): Produto {
-    return {nome: '', descricao: '' ,preco: 0, estoque: 0 ,imagem: ''};
+    return {nome: '', descricao: '' ,preco: 0, preco_antigo: 0,avaliacao: '',genero:'', estoque: 0 ,imagem: ''};
   }
 }

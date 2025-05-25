@@ -9,6 +9,9 @@
     <input type="text" name="nome" [(ngModel)]="novoProduto.nome" placeholder="Nome do produto" required />
     <input type="text" name="descricao" [(ngModel)]="novoProduto.descricao" placeholder="Descrição do produto" required />
     <input type="number" name="preco" [(ngModel)]="novoProduto.preco" placeholder="Preço" required />
+    <input type="number" name="preco_antigo" [(ngModel)]="novoProduto.preco_antigo" placeholder="Preço antigo" required />
+    <input type="text" name="avaliacao" [(ngModel)]="novoProduto.avaliacao" placeholder="Avaliacao" required />
+    <input type="text" name="genero" [(ngModel)]="novoProduto.genero" placeholder="Genero" required />
     <input type="number" name="estoque" [(ngModel)]="novoProduto.estoque" placeholder="Estoque" required />
     <input type="text" name="imagem" [(ngModel)]="novoProduto.imagem" placeholder="Caminho da imagem" required />
 
@@ -23,6 +26,9 @@
         <th>Nome</th>
         <th>Descrição</th>
         <th>Preço</th>
+        <th>Preço Antigo</th>
+        <th>Avaliação</th>
+        <th>genero</th>
         <th>Estoque</th>
         <th>Imagem</th>
         <th>Ações</th>
@@ -36,6 +42,9 @@
         <td>{{ produto.nome }}</td>
         <td>{{ produto.descricao }}</td>
         <td>R$ {{ produto.preco | number : "1.2-2" }}</td>
+        <td>R$ {{ produto.preco_antigo | number : "1.2-2" }}</td>
+        <td>{{ produto.avaliacao }}</td>
+        <td>{{ produto.genero }}</td>
         <td>{{ produto.estoque }}</td>
         <td>{{ produto.imagem }}</td>
         <td>

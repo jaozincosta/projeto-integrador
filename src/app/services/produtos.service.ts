@@ -40,6 +40,10 @@ export class ProdutosService {
   removerFavorito(id: number): Observable<any> {
     return this.http.delete(`${this.FAVORITOS_API}/${id}`);
   }
+
+  adicionarAosFavoritos(produto: any): Observable<any> {
+  return this.http.post(this.FAVORITOS_API, produto);
+}
   
   criarConta(usuario: any): Observable<any> {
     return this.http.post(this.USUARIO_API, usuario);

@@ -30,12 +30,12 @@
   </div>
 
   <nav class="navegacao-principal" aria-label="Categorias principais">
-    <ul>
-      <li><a href="#">MASCULINO</a></li>
-      <li><a href="#">FEMININO</a></li>
-      <li><a href="#">INFANTIL</a></li>
-    </ul>
-  </nav>
+  <ul>
+    <li><a [routerLink]="['/produtostenis', 'masculino']">MASCULINO</a></li>
+    <li><a [routerLink]="['/produtostenis', 'feminino']">FEMININO</a></li>
+    <li><a [routerLink]="['/produtostenis', 'infantil']">INFANTIL</a></li>
+  </ul>
+</nav>
 </header>
 
 <section>
