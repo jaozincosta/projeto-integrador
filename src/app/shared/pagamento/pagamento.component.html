@@ -1,4 +1,4 @@
-<a [routerLink]="'/'" class="logo-voltar" aria-label="Voltar para a home">
+<a [routerLink]="/confirmacao" class="logo-voltar" aria-label="Voltar para a home">
   <img src="assets/img/marca.png" alt="Logo da loja" />
 </a>
 
@@ -6,13 +6,7 @@
   <h1>Tela de Pagamento</h1>
 
   <form (ngSubmit)="realizarPagamento()">
-    <input
-      type="number"
-      name="valor"
-      [(ngModel)]="valor"
-      placeholder="Valor do pagamento"
-      required
-    />
+    <input type="number" name="valor" [(ngModel)]="valor" placeholder="Valor do pagamento" required />
 
     <select name="metodo" [(ngModel)]="metodoPagamento" required>
       <option value="" disabled selected>
@@ -26,8 +20,10 @@
     <button type="submit">Pagar</button>
   </form>
 
-  <div *ngIf="pago" class="mensagem-pagamento">
+  @if(pago){
+  <div class="mensagem-pagamento">
     Pagamento realizado com sucesso!
     <button (click)="resetarFormulario()">Novo Pagamento</button>
   </div>
+  }
 </section>

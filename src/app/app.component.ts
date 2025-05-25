@@ -20,6 +20,7 @@ import { NgIf } from '@angular/common';
     ProductCardComponent,
     CategoriasComponent,
     MaisVendidosComponent,
+    RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
