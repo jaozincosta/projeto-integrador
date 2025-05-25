@@ -15,7 +15,7 @@ export class CategoriasComponent {
     { nome: 'Feminino', imagem: 'assets/img/.png' },
     { nome: 'Infantil', imagem: 'assets/img/.png' },
     { nome: 'Esporte', imagem: 'assets/img/.png' },
-    { nome: 'Caswual', imagem: 'assets/img/.png' },
+    { nome: 'Casual', imagem: 'assets/img/.png' },
     { nome: 'Social', imagem: 'assets/img/.png' },
   ];
 }
