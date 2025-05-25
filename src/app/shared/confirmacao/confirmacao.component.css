@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.confirmacao{
+    max-width: 45rem;
+    height: 450px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0px 10px 64px rgba(0,0,0,0.1);
+    border-radius: 30px;
+    padding: 40px;
+}
+.separator{
+    height: 1.5px;
+    max-width:100%;
+    background-color: rgb(218, 218, 218);
+}
+.confirmacao-title{
+    font-size: 2.3rem;
+    color: #ffa200;
+}
+.pedido{
+    display: flex;
+    padding: 10px;
+}
+.pedido-img{
+    margin: 20px;
+    max-width: 300px;
+}
+.pedido-img img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+.pedido-desc{
+    padding: 20px 0px;
+}
+.pedido-description_p{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.pedido-descriotion_list{
+    list-style: none;
+    margin: 15px 0px;
+}
+.pedido-descriotion_list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.pedido-submit{
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.pedido-submit button{
+    position: relative;
+    padding: 7px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+}
+.pedido-submit button::before{
+    position: absolute;
+    content:"";
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 45px;
+    background-color: dodgerblue;
+    transition: all .2s ease;
+    z-index: 0;
+}
+.pedido-submit button:hover::before{
+    width: 150px;
+}
+
+.pedido-submit button span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 10;
+}
