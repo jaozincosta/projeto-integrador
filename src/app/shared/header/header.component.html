@@ -19,7 +19,7 @@
       <a routerLink="/entrar" aria-label="Login">
         <img class="icon" src="assets/img/pessoa.png" alt="Login" />
       </a>
-      <a href="#" aria-label="Favoritos">
+      <a routerLink="/favoritos" aria-label="Favoritos">
         <img class="icon" src="assets/img/coracao.png" alt="Favoritos" />
       </a>
       <a href="#" aria-label="Carrinho de compras">
@@ -29,23 +29,15 @@
           alt="Carrinho"
         />
       </a>
-      <a routerLink="/manutencao" aria-label="Administração">
-        <img
-          class="icon"
-          src="assets/img/configuracoes.png"
-          alt="Administração"
-        />
-      </a>
+      
     </nav>
   </div>
 
   <nav class="navegacao-principal" aria-label="Categorias principais">
     <ul>
-      <li><a href="#">Novidades</a></li>
-      <li><a href="#">Masculino</a></li>
-      <li><a href="#">Feminino</a></li>
-      <li><a href="#">Infantil</a></li>
-      <li><a href="#">Sport</a></li>
+      <li><a [routerLink]="['/produtostenis', 'masculino']">MASCULINO</a></li>
+      <li><a [routerLink]="['/produtostenis', 'feminino']">FEMININO</a></li>
+      <li><a [routerLink]="['/produtostenis', 'infantil']">INFANTIL</a></li>
     </ul>
   </nav>
 </header>

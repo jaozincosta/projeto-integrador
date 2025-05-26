@@ -13,16 +13,13 @@
 
 <div class="boxLogin">
   <h2>Conta</h2>
-  <form>
-    <input type="text" class="input-box" placeholder="Nome completo" required />
-    <input type="text" class="input-box" placeholder="Usuário" required />
-    <input type="password" class="input-box" placeholder="Senha" required />
-    <input
-      type="password"
-      class="input-box"
-      placeholder="Confirme a Senha"
-      required
-    />
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" class="input-box" placeholder="Nome completo" [(ngModel)]="nomeCompleto" name="nomeCompleto" required />
+    <input type="text" class="input-box" placeholder="Usuário" [(ngModel)]="usuario" name="usuario" required />
+    <input type="password" class="input-box" placeholder="Senha" [(ngModel)]="senha" name="senha" required />
+    <input type="password" class="input-box" placeholder="Confirme a Senha" [(ngModel)]="confirmarSenha" name="confirmarSenha" required />
+    <p *ngIf="errorMsg" style="color: red;">{{ errorMsg }}</p>
     <button type="submit" class="btn">Criar</button>
   </form>
 </div>
+

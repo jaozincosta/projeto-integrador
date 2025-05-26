@@ -11,16 +11,15 @@ export interface Produto {
   precoAtual: number;
   parcelas: string;
   desconto: number;
-  destaque?: string;
   freteGratis?: boolean;
 }
 
 @Component({
-  selector: 'app-product-card',
+  selector: 'app-card-produto',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css'],
+  templateUrl: './card-produto.component.html',
+  styleUrls: ['./card-produto.component.css'],
 })
 export class ProductCardComponent {
   @Input() produto!: Produto;
