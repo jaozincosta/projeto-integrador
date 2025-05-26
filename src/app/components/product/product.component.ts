@@ -60,7 +60,7 @@ export class ProductComponent {
       };
 
       this.carrinhoService.adicionar(produto);
-      this.quantity = 0; // Resetar após adicionar, opcional
+      this.quantity = 0; // Resetar após adicionar
       alert('Produto adicionado ao carrinho!');
     }
   }
