@@ -19,8 +19,13 @@
       <a routerLink="/entrar" aria-label="Login">
         <img class="icon" src="assets/img/pessoa.png" alt="Login" />
       </a>
-      <a href="#" aria-label="Favoritos">
-        <img class="icon" src="assets/img/coracao.png" alt="Favoritos" />
+
+      <a [routerLink]="'/favoritos'" aria-label="Favoritos">
+        <img
+          class="icon"
+          src="assets/img/coracao.png"
+          alt="Ícone de favoritos"
+        />
       </a>
       <a href="#" aria-label="Carrinho de compras">
         <img

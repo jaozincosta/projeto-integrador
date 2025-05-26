@@ -7,6 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ProductCardComponent } from './shared/card-produto/card-produto.component';
 import { CategoriasComponent } from './shared/categorias/categorias.component';
 import { MaisVendidosComponent } from './shared/mais-vendidos/mais-vendidos.component';
+import { FavoritosComponent } from './shared/favoritos/favoritos.component';
 import { NgIf } from '@angular/common';
 
 @Component({
@@ -20,6 +21,7 @@ import { NgIf } from '@angular/common';
     ProductCardComponent,
     CategoriasComponent,
     MaisVendidosComponent,
+    FavoritosComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
