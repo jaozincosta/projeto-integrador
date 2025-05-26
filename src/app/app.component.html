@@ -1,70 +1,85 @@
-<ng-container *ngIf="isLayoutVisible()">
+<ng-container *ngIf="mostrarLayout">
   <app-header></app-header>
 </ng-container>
 
 <router-outlet></router-outlet>
 
-<ng-container *ngIf="isLayoutVisible()">
+<ng-container *ngIf="mostrarLayout">
   <h2 class="titulo-central">PROMOÇÕES</h2>
 
   <div class="cards-container">
     <app-card-produto
       [produto]="{
+        id: 1,
         nome: 'Tênis Air force',
         imagem: 'assets/img/tenis7.png',
         precoOriginal: 599.99,
         precoAtual: 379.99,
         parcelas: 'ou 6x de R$ 66,67',
         desconto: 33,
-        freteGratis: true
+        freteGratis: true,
+        quantidade: 1,
+        preco: 379.99
       }"
     ></app-card-produto>
 
     <app-card-produto
       [produto]="{
+        id: 2,
         nome: 'Tênis Air force',
         imagem: 'assets/img/tenis7.png',
         precoOriginal: 499.99,
         precoAtual: 349.99,
         parcelas: 'ou 5x de R$ 69,99',
         desconto: 30,
-        freteGratis: true
+        freteGratis: true,
+        quantidade: 1,
+        preco: 349.99
       }"
     ></app-card-produto>
 
     <app-card-produto
       [produto]="{
+        id: 3,
         nome: 'Tênis Air force',
         imagem: 'assets/img/tenis7.png',
         precoOriginal: 449.99,
         precoAtual: 299.99,
         parcelas: 'ou 4x de R$ 74,99',
         desconto: 33,
-        freteGratis: true
+        freteGratis: true,
+        quantidade: 1,
+        preco: 299.99
       }"
     ></app-card-produto>
 
     <app-card-produto
       [produto]="{
+        id: 4,
         nome: 'Tênis Air force',
         imagem: 'assets/img/tenis7.png',
         precoOriginal: 699.99,
         precoAtual: 499.99,
         parcelas: 'ou 6x de R$ 83,33',
         desconto: 29,
-        freteGratis: true
+        freteGratis: true,
+        quantidade: 1,
+        preco: 499.99
       }"
     ></app-card-produto>
 
     <app-card-produto
       [produto]="{
+        id: 5,
         nome: 'Tênis Air force',
         imagem: 'assets/img/tenis7.png',
         precoOriginal: 399.99,
         precoAtual: 269.99,
         parcelas: 'ou 3x de R$ 89,99',
         desconto: 32,
-        freteGratis: true
+        freteGratis: true,
+        quantidade: 1,
+        preco: 269.99
       }"
     ></app-card-produto>
   </div>

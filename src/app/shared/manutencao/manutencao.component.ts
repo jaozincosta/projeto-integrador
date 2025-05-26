@@ -67,11 +67,18 @@ export class ManutencaoComponent implements OnInit {
       nome: '',
       descricao: '',
       preco: 0,
+      precoOriginal: 0,
+      precoAtual: 0,
       preco_antigo: 0,
       avaliacao: '',
       genero: '',
       estoque: 0,
       imagem: '',
+      parcelas: '',
+      desconto: 0,
+      freteGratis: false,
+      estrelas: 0,
+      quantidade: 1,
     };
   }
 }

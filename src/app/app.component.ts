@@ -7,8 +7,19 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ProductCardComponent } from './shared/card-produto/card-produto.component';
 import { CategoriasComponent } from './shared/categorias/categorias.component';
 import { MaisVendidosComponent } from './shared/mais-vendidos/mais-vendidos.component';
-import { FavoritosComponent } from './shared/favoritos/favoritos.component';
 import { NgIf } from '@angular/common';
+
+interface Produto {
+  id: number;
+  nome: string;
+  precoOriginal: number;
+  precoAtual: number;
+  parcelas: string;
+  desconto: number;
+  freteGratis: boolean;
+  imagem: string;
+  quantidade: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -21,13 +32,12 @@ import { NgIf } from '@angular/common';
     ProductCardComponent,
     CategoriasComponent,
     MaisVendidosComponent,
-    FavoritosComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  rotasEscondidas = [
+  private rotasEscondidas = [
     '/entrar',
     '/manutencao',
     '/registrar',
@@ -36,19 +46,31 @@ export class AppComponent {
     '/produtostenis',
   ];
 
-  constructor(private router: Router) {}
+  mostrarLayout = true;
 
-  isLayoutVisible(): boolean {
-    return !this.rotasEscondidas.some((r) => this.router.url.startsWith(r));
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter((event) => event.constructor.name === 'NavigationEnd'))
+      .subscribe(() => {
+        this.mostrarLayout = this.isLayoutVisible();
+      });
   }
 
-  public produtos = Array(10).fill({
+  isLayoutVisible(): boolean {
+    return !this.rotasEscondidas.some((r) =>
+      this.router.url.startsWith(r)
+    );
+  }
+
+  produtos: Produto[] = Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
     nome: 'Tênis Asics Gel',
-    imagem: 'assets/img/asics.png',
     precoOriginal: 599.99,
     precoAtual: 379.99,
     parcelas: 'ou 6x de R$ 66,67',
     desconto: 33,
     freteGratis: true,
-  });
+    imagem: 'assets/img/asics.png',
+    quantidade: 1,
+  }));
 }
