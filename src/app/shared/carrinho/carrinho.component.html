@@ -1,4 +1,9 @@
+<div *ngIf="showPopup" class="popup">
+  🛒 Compra finalizada com sucesso!
+</div>
+
 <h2>Meu Carrinho</h2>
+
 
 <ng-container *ngIf="carrinho.length > 0; else carrinhoVazio">
   <table>

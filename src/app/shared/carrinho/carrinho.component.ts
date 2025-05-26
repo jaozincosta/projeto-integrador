@@ -14,13 +14,14 @@ import { Observable } from 'rxjs';
 export class CarrinhoComponent implements OnInit {
   carrinho: Produto[] = [];
   total$: Observable<number>;
+  showPopup = false;
 
   constructor(private carrinhoService: CarrinhoService) {
     this.total$ = this.carrinhoService.getTotal();
   }
 
   ngOnInit(): void {
-    this.carrinhoService.getItens().subscribe((itens) => {
+    this.carrinhoService.getItens().subscribe((itens: Produto[]) => {
       this.carrinho = itens;
     });
   }
@@ -35,9 +36,16 @@ export class CarrinhoComponent implements OnInit {
 
   finalizarCompra(): void {
     this.carrinhoService.limparCarrinho().subscribe(() => {
-      alert('Compra finalizada com sucesso!');
       this.carrinho = [];
+      this.mostrarPopup();
     });
+  }
+
+  mostrarPopup(): void {
+    this.showPopup = true;
+    setTimeout(() => {
+      this.showPopup = false;
+    }, 3000);
   }
 
   trackById(index: number, item: Produto): number {
