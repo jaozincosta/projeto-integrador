@@ -1,0 +1,21 @@
+<div class="card" *ngIf="produto">
+  <img [src]="produto.imagem" [alt]="produto.nome" class="imagem-produto" />
+
+  <div class="desconto-label" *ngIf="produto.desconto">
+    -{{ produto.desconto }}% OFF
+  </div>
+
+  <div class="info">
+    <h2>{{ produto.nome }}</h2>
+
+    <p class="preco-original" *ngIf="produto.precoOriginal">
+      R$ {{ produto.precoOriginal | number : "1.2-2" }}
+    </p>
+
+    <p class="preco-atual">R$ {{ produto.precoAtual | number : "1.2-2" }}</p>
+
+    <p class="parcelas">{{ produto.parcelas }}</p>
+
+    <p class="frete" *ngIf="produto.freteGratis">Frete grátis</p>
+  </div>
+</div>

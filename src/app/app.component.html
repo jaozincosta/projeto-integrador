@@ -1,11 +1,135 @@
-<ng-container *ngIf="isLayoutVisible()">
+<ng-container *ngIf="mostrarLayout">
   <app-header></app-header>
 </ng-container>
 
 <router-outlet></router-outlet>
 
-<ng-container *ngIf="isLayoutVisible()">
-  <app-carrossel></app-carrossel>
-  <app-element></app-element>
+<ng-container *ngIf="mostrarLayout">
+  <h2 class="titulo-central">PROMOÇÕES</h2>
+
+  <div class="cards-container">
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+    <app-card-produto
+      [produto]="{
+        nome: 'Tênis Asics Gel',
+        imagem: 'assets/img/asics.png',
+        precoOriginal: 599.99,
+        precoAtual: 379.99,
+        parcelas: 'ou 6x de R$ 66,67',
+        desconto: 33,
+        freteGratis: true
+      }"
+    >
+    </app-card-produto>
+  </div>
+  <app-categorias></app-categorias>
+  <app-mais-vendidos></app-mais-vendidos>
   <app-footer></app-footer>
 </ng-container>

@@ -1,43 +1,68 @@
-<header>
+<header class="header">
   <div class="container-header">
-    <div class="logo">
-      <a href="/" aria-label="Página inicial">
-        <img src="assets/img/marca.png" alt="Logo da Loja" />
-      </a>
-    </div>
+    <a routerLink="/" class="logo" aria-label="Página inicial">
+      <img src="assets/img/marca.png" alt="Logo da Loja" />
+    </a>
 
-    <form class="barra-pesquisa" action="/pesquisar" method="get" role="search">
+    <form class="barra-pesquisa" role="search" (submit)="buscar()">
       <input
         type="text"
         name="q"
         placeholder="O que você quer encontrar?"
         aria-label="Buscar produto"
+        [(ngModel)]="termoBusca"
       />
       <button type="submit">Buscar</button>
     </form>
 
-    <nav class="icones-header" aria-label="Ações do usuário">
-      <a [routerLink]="['/entrar']" aria-label="Login">
-        <img class="icon" src="assets/img/pessoa.png" alt="Ícone de login" />
+    <nav class="icones-header" aria-label="Menu do usuário">
+      <a routerLink="/entrar" aria-label="Login">
+        <img class="icon" src="assets/img/pessoa.png" alt="Login" />
       </a>
+<<<<<<< HEAD
       <a [routerLink]="'/favoritos'" aria-label="Favoritos">
         <img class="icon" src="assets/img/coracao.png" alt="Ícone de favoritos" />
+=======
+      <a href="#" aria-label="Favoritos">
+        <img class="icon" src="assets/img/coracao.png" alt="Favoritos" />
+>>>>>>> e539be40f9d46802624fba7987bdf09af03dcb45
       </a>
       <a href="#" aria-label="Carrinho de compras">
-        <img class="icon" src="assets/img/carrinho-de-compras.png" alt="Ícone do carrinho" />
+        <img
+          class="icon"
+          src="assets/img/carrinho-de-compras.png"
+          alt="Carrinho"
+        />
       </a>
+<<<<<<< HEAD
+=======
+      <a routerLink="/manutencao" aria-label="Administração">
+        <img
+          class="icon"
+          src="assets/img/configuracoes.png"
+          alt="Administração"
+        />
+      </a>
+>>>>>>> e539be40f9d46802624fba7987bdf09af03dcb45
     </nav>
   </div>
 
   <nav class="navegacao-principal" aria-label="Categorias principais">
+<<<<<<< HEAD
   <ul>
     <li><a [routerLink]="['/produtostenis', 'masculino']">MASCULINO</a></li>
     <li><a [routerLink]="['/produtostenis', 'feminino']">FEMININO</a></li>
     <li><a [routerLink]="['/produtostenis', 'infantil']">INFANTIL</a></li>
   </ul>
 </nav>
+=======
+    <ul>
+      <li><a href="#">Novidades</a></li>
+      <li><a href="#">Masculino</a></li>
+      <li><a href="#">Feminino</a></li>
+      <li><a href="#">Infantil</a></li>
+      <li><a href="#">Sport</a></li>
+    </ul>
+  </nav>
+>>>>>>> e539be40f9d46802624fba7987bdf09af03dcb45
 </header>
-
-<section>
-  <h1 class="desconto">20% OFF Em Sua Primeira Compra</h1>
-</section>

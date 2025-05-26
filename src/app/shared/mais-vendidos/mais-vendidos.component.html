@@ -1,0 +1,36 @@
+<section class="mais-vendidos-container">
+  <h2 class="titulo">Os mais vendidos!</h2>
+  <div class="lista-produtos">
+    <div class="card-produto" *ngFor="let p of produtos">
+      <img [src]="p.imagem" [alt]="p.nome" class="imagem" />
+
+      <div *ngIf="p.desconto > 0" class="desconto">-{{ p.desconto }}% OFF</div>
+
+      <h3>{{ p.nome }}</h3>
+
+      <div class="estrelas">
+        <span *ngFor="let _ of [].constructor(5)">
+          <img
+            src="assets/img/star.svg"
+            class="estrela"
+            [class.inativa]="p.estrelas < _ + 1"
+          />
+        </span>
+      </div>
+
+      <p class="preco-antigo" *ngIf="p.desconto > 0">
+        R$ {{ p.precoOriginal | number : "1.2-2" }}
+      </p>
+
+      <p class="preco-atual">R$ {{ p.precoAtual | number : "1.2-2" }}</p>
+
+      <p class="parcelas">{{ p.parcelas }}</p>
+
+      <button class="botao">PROTEGIDOS</button>
+
+      <span *ngIf="p.freteGratis" class="frete">Frete grátis</span>
+
+      
+    </div>
+  </div>
+</section>
