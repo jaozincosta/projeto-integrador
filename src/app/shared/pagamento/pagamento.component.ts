@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
 })
 export class PagamentoComponent {
   metodoPagamento: string = '';
-  valor: number = 0;
+  valor: number = 0
   pago: boolean = false;
 
   realizarPagamento() {
