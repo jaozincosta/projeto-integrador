@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface Produto {
+  preco: number;
+  id: any;
+  quantidade: any;
   nome: string;
   imagem: string;
   precoOriginal: number;
