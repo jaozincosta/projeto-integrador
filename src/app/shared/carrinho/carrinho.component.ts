@@ -10,21 +10,9 @@ import { Produto } from '../../services/types/types'; // ajuste para o tipo corr
   templateUrl: './carrinho.component.html',
   styleUrls: ['./carrinho.component.css'],
 })
-export class CarrinhoComponent implements OnInit {
-  carrinho: Produto[] = [];
-  total: number = 0;
-
-  constructor(private carrinhoService: CarrinhoService) {}
-
-  ngOnInit(): void {
-    this.carrinhoService.getItens().subscribe((itens) => {
-      this.carrinho = itens;
-    });
-
-    this.carrinhoService.getTotal().subscribe((valor) => {
-      this.total = valor;
-    });
-  }
+export class CarrinhoComponent {
+carrinho: any;
+  constructor(public carrinhoService: CarrinhoService) {}
 
   alterarQuantidade(id: number, delta: number): void {
     this.carrinhoService.alterarQuantidade(id, delta);

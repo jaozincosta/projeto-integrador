@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class SneakersProductComponent {
+export class ProductComponent {
   sidebarActive = false;
   quantity = 0;
 
