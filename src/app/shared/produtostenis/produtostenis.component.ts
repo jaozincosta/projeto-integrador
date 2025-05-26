@@ -16,7 +16,6 @@ export class ProdutostenisComponent implements OnInit {
   produtostenis: any[] = [];
   genero: string = '';
 
-
   constructor(private route: ActivatedRoute, private http: HttpClient, private produtosService: ProdutosService ) { }
 
   ngOnInit() {

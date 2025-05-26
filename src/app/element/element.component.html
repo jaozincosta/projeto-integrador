@@ -1,100 +1,38 @@
 <div class="ofertas">
-    <h3>Ofertas da Semana</h3>
-    <img src="assets/img/tempo.png" alt="imagem">
+  <h3>Ofertas da Semana</h3>
+  <img src="assets/img/tempo.png" alt="imagem">
 </div>
-<div class="produtos-container2">
-<div class="produto">
-    <img src="assets/img/tenis1.png" alt="tenis" class="tenis-img">
-    <p>Tênis Adizero Takumi Sen 10</p>
-    <img src="assets/img/estrela.png" alt="estrela" class="estrela-img">
-    <s>1800 </s>
-    <p>Por 1200</p>
+
+<div class="principal2">
+  @for (item of produtostenis1; track item.id) {
+    <div class="cardfavorito">
+      <img [src]="item.imagem" alt="{{ item.nome }}" />
+      <h3>{{ item.nome }}</h3>
+      <p class="avaliacao">{{ item.avaliacao }}</p>
+      <p>
+        <s><span class="preco_antigo">R$ {{ item.preco_antigo | number:'1.2-2' }}</span></s>
+        <span> Por </span>
+        <span class="preco">R$ {{ item.preco | number:'1.2-2' }}</span>
+      </p>
+    </div>
+  }
 </div>
-<div class="produto2">
-    <img src="assets/img/tenis2.png" alt="tenis" class="tenis-img">
-    <p>Tênis Adidas Ultra Energy</p>
-    <img src="assets/img/4estrelas.png" alt="estrela" class="estrela-img">
-    <s>450 </s>
-    <p>Por 220</p>
-</div>
-<div class="produto3">
-    <img src="assets/img/tenis3.png" alt="tenis" class="tenis-img">
-    <p>Tênis de Corrida Deviate NITRO™ 3</p>
-    <img src="assets/img/3estrelas.png" alt="estrela" class="estrela-img">
-    <s>1500 </s>
-    <p>Por 1100</p>
-</div>
-<div class="produto4">
-    <img src="assets/img/tenis4.png" alt="tenis" class="tenis-img">
-    <p>Tênis Olympikus Corre Supra</p>
-    <img src="assets/img/estrela.png" alt="estrela" class="estrela-img">
-    <s>1200 </s>
-    <p>Por 999</p>
-</div>
-</div>
+
 <div>
-    <img src="assets/img/propaganda.png" alt="propaganda" class="propaganda-img">
+  <img src="assets/img/propaganda.png" alt="propaganda" class="propaganda-img">
 </div>
-<div class="produtos-container2">
-    <div class="produto">
-        <img src="assets/img/tenis5.png" alt="tenis" class="tenis-img">
-        <p>Tênis Handball Spezial</p>
-        <img src="assets/img/estrela.png" alt="estrela" class="estrela-img">
-        <s>1000 </s>
-        <p>Por 800</p>
+
+<div class="principal2">
+  @for (item of produtostenis2; track item.id) {
+    <div class="cardfavorito">
+      <img [src]="item.imagem" alt="{{ item.nome }}" />
+      <h3>{{ item.nome }}</h3>
+      <p class="avaliacao">{{ item.avaliacao }}</p>
+      <p>
+        <s><span class="preco_antigo">R$ {{ item.preco_antigo | number:'1.2-2' }}</span></s>
+        <span> Por </span>
+        <span class="preco">R$ {{ item.preco | number:'1.2-2' }}</span>
+      </p>
     </div>
-    <div class="produto2">
-        <img src="assets/img/tenis6.png" alt="tenis" class="tenis-img">
-        <p>Tênis RS-X 3D Feminino</p>
-        <img src="assets/img/3estrelas.png" alt="estrela" class="estrela-img">
-        <s>500 </s>
-        <p>Por 400</p>
-    </div>
-    <div class="produto3">
-        <img src="assets/img/tenis7.png" alt="tenis" class="tenis-img">
-        <p>Tênis Olympikus Urb Feminino</p>
-        <img src="assets/img/3estrelas.png" alt="estrela" class="estrela-img">
-        <s>400 </s>
-        <p>Por 200</p>
-    </div>
-    <div class="produto4">
-        <img src="assets/img/tenis8.png" alt="tenis" class="tenis-img">
-        <p>Tênis Palermo Moda Xtra Gum</p>
-        <img src="assets/img/estrela.png" alt="estrela" class="estrela-img">
-        <s>700 </s>
-        <p>Por 600</p>
-    </div>
-    </div>
-    <div>
-        <img src="assets/img/propaganda2.png" alt="propaganda2" class="propaganda-img">
-    </div>
-    <div class="produtos-container2">
-        <div class="produto">
-            <img src="assets/img/tenis9.png" alt="tenis" class="tenis-img">
-            <p>Tênis Infantil Fila Classic Court </p>
-            <img src="assets/img/2estrelas.png" alt="estrela" class="estrela-img">
-            <s>200 </s>
-            <p>Por 145</p>
-        </div>
-        <div class="produto2">
-            <img src="assets/img/tenis10.png" alt="tenis" class="tenis-img">
-            <p>Tênis Infantil Avura</p>
-            <img src="assets/img/4estrelas.png" alt="estrela" class="estrela-img">
-            <s>100 </s>
-            <p>Por 80</p>
-        </div>
-        <div class="produto3">
-            <img src="assets/img/tenis11.png" alt="tenis" class="tenis-img">
-            <p>Tênis Infantil Bibi</p>
-            <img src="assets/img/3estrelas.png" alt="estrela" class="estrela-img">
-            <s>140 </s>
-            <p>Por 120</p>
-        </div>
-        <div class="produto4">
-            <img src="assets/img/tenis12.png" alt="tenis" class="tenis-img">
-            <p>Tênis Infantil Asics Fantasy 4 Ps</p>
-            <img src="assets/img/estrela.png" alt="estrela" class="estrela-img">
-            <s>240 </s>
-            <p>Por 200</p>
-        </div>
-        </div>
+  }
+</div>

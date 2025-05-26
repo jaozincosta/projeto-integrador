@@ -24,7 +24,7 @@ export class AppComponent {
   constructor(public router: Router) {}
 
   isLayoutVisible(): boolean {
-  const rotasEscondidas = ['/entrar', '/manutencao', '/registrar', '/favoritos', '/produtostenis'];
+  const rotasEscondidas = ['/entrar', '/manutencao', '/registrar', '/favoritos', '/produtostenis', '/carrinho'];
   return !rotasEscondidas.some(r => this.router.url.startsWith(r));
 }
 }
