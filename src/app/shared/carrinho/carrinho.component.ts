@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TrackByFunction } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../services/carrinho.service';
 import { Produto } from '../card-produto/card-produto.component';
@@ -12,6 +12,7 @@ import { Produto } from '../card-produto/card-produto.component';
 })
 export class CarrinhoComponent {
 carrinho: any;
+trackById: TrackByFunction<any> | undefined;
   constructor(public carrinhoService: CarrinhoService) {}
 
   alterarQuantidade(id: number, delta: number): void {
