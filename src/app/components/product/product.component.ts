@@ -51,7 +51,12 @@ export class ProductComponent {
         imagem: this.product.image,
         preco: this.product.price,
         quantidade: this.quantity,
-        cor: this.product.color
+        cor: this.product.color,
+        estoque: 0,
+        descricao: '',
+        preco_antigo: 0,
+        avaliacao: '',
+        genero: ''
       };
 
       this.carrinhoService.adicionar(produto);
