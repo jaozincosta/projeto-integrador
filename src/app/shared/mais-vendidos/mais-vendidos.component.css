@@ -1,0 +1,97 @@
+.mais-vendidos-container {
+  padding: 2rem;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.lista-produtos {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.card-produto {
+  min-width: 180px;
+  background: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.imagem {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.desconto {
+  background-color: #d3ff00;
+  font-weight: bold;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.estrelas {
+  margin-bottom: 0.5rem;
+}
+
+.estrela {
+  width: 16px;
+  height: 16px;
+}
+
+.estrela.inativa {
+  opacity: 0.3;
+}
+
+.preco-antigo {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.preco-atual {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.preco-atual {
+  font-size: 1rem;
+}
+
+.botao {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+.frete {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: green;
+  font-weight: bold;
+}
+
+.enviado {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #444;
+}

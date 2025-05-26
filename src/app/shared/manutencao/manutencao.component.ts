@@ -3,13 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProdutosService } from '../../services/produtos.service';
-
-interface Produto {
-  id: number;
-  nome: string;
-  preco: number;
-  estoque: number;
-}
+import { Produto } from '../../services/types/types';
 
 @Component({
   selector: 'app-manutencao',
@@ -68,6 +62,16 @@ export class ManutencaoComponent implements OnInit {
   }
 
   resetProduto(): Produto {
-    return { id: 0, nome: '', preco: 0, estoque: 0 };
+    return {
+      id: 0,
+      nome: '',
+      descricao: '',
+      preco: 0,
+      preco_antigo: 0,
+      avaliacao: '',
+      genero: '',
+      estoque: 0,
+      imagem: '',
+    };
   }
 }

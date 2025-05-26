@@ -1,0 +1,28 @@
+.promocoes-container {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.titulo-central {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.titulo-central {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: black;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}

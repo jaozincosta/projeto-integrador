@@ -5,7 +5,7 @@
 
   <nav class="navegação">
     <a routerLink="/">Início</a>
-    <a href="#">Sobre</a>
+    <a href="#">sobre</a>
     <a href="#">Serviço</a>
     <a href="#">Contato</a>
     <a routerLink="/registrar" class="botLogin">Criar</a>
@@ -14,13 +14,19 @@
 
 <div class="boxLogin">
   <h2>Login</h2>
-  <form (submit)="onSubmit()">
-    <input type="text" class="input-box" placeholder="Usuário" required />
-    <input type="password" class="input-box" placeholder="Senha" required />
+  <form (submit)="onSubmit(); $event.preventDefault()">
+    <input type="text" class="input-box" placeholder="Usuário" required [(ngModel)]="username" name="username" />
+    <input type="password" class="input-box" placeholder="Senha" required [(ngModel)]="password" name="password" />
     <button type="submit" class="btn">Login</button>
     <br />
-    <label> <input type="checkbox" /> Lembrar-me </label>
+    <label><input type="checkbox" /> Lembrar-me</label>
     <a href="#">Esqueceu a Senha?</a>
-    <p>Não tem uma conta? <a routerLink="/registrar">Criar uma conta</a></p>
+    <p>
+      Não tem uma conta?
+      <a routerLink="/registrar">Criar uma conta</a>
+    </p>
+    @if (errorMsg) {
+    <p style="color: red;">{{ errorMsg }}</p>
+    }
   </form>
 </div>

@@ -14,10 +14,38 @@
       required
     />
     <input
+      type="text"
+      name="descricao"
+      [(ngModel)]="novoProduto.descricao"
+      placeholder="Descrição do produto"
+      required
+    />
+    <input
       type="number"
       name="preco"
       [(ngModel)]="novoProduto.preco"
       placeholder="Preço"
+      required
+    />
+    <input
+      type="number"
+      name="preco_antigo"
+      [(ngModel)]="novoProduto.preco_antigo"
+      placeholder="Preço antigo"
+      required
+    />
+    <input
+      type="text"
+      name="avaliacao"
+      [(ngModel)]="novoProduto.avaliacao"
+      placeholder="Avaliacao"
+      required
+    />
+    <input
+      type="text"
+      name="genero"
+      [(ngModel)]="novoProduto.genero"
+      placeholder="Genero"
       required
     />
     <input
@@ -27,33 +55,53 @@
       placeholder="Estoque"
       required
     />
+    <input
+      type="text"
+      name="imagem"
+      [(ngModel)]="novoProduto.imagem"
+      placeholder="Caminho da imagem"
+      required
+    />
 
     <button type="submit">
       {{ editandoId ? "Atualizar" : "Adicionar" }}
     </button>
   </form>
-
-  <table *ngIf="produtos.length > 0">
+  <table>
     <thead>
       <tr>
         <th>ID</th>
         <th>Nome</th>
+        <th>Descrição</th>
         <th>Preço</th>
+        <th>Preço Antigo</th>
+        <th>Avaliação</th>
+        <th>genero</th>
         <th>Estoque</th>
+        <th>Imagem</th>
         <th>Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let produto of produtos">
+      @if (produtos.length > 0) { @for (produto of produtos; track produto.id) {
+      <tr>
         <td>{{ produto.id }}</td>
         <td>{{ produto.nome }}</td>
+        <td>{{ produto.descricao }}</td>
         <td>R$ {{ produto.preco | number : "1.2-2" }}</td>
+        <td>R$ {{ produto.preco_antigo | number : "1.2-2" }}</td>
+        <td>{{ produto.avaliacao }}</td>
+        <td>{{ produto.genero }}</td>
         <td>{{ produto.estoque }}</td>
+        <td>{{ produto.imagem }}</td>
         <td>
           <button (click)="editar(produto)">Editar</button>
-          <button (click)="excluir(produto.id)">Excluir</button>
+          <button class="excluir" (click)="excluir(produto.id!)">
+            Excluir
+          </button>
         </td>
       </tr>
+      }}
     </tbody>
   </table>
 </section>
