@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { CarrinhoService } from '../../services/carrinho.service';
+import { Produto } from '../../services/types/types';
+
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -14,14 +17,17 @@ export class ProductComponent {
   quantity = 0;
 
   product = {
+    id: 1,
     name: 'Adidas Adizero Takumi Sen',
     image: 'assets/img/tenis2.png',
     company: 'SNEAKER COMPANY',
-    description: 'O Adidas Adizero Takumi Sen 10 é um tênis leve (185g no tamanho 40) que combina a agilidade de modelos clássicos com o retorno de energia dos tênis modernos com placa, sem perder sua leveza e perfil baixo.',
+    description: 'O Adidas Adizero Takumi Sen 10 é um tênis leve (185g no tamanho 40)...',
     oldPrice: 980.00,
     price: 490.00,
     color: 'Preto'
   };
+
+  constructor(private carrinhoService: CarrinhoService) {}
 
   toggleSidebar() {
     this.sidebarActive = !this.sidebarActive;
@@ -37,6 +43,22 @@ export class ProductComponent {
     }
   }
 
+  adicionarAoCarrinho() {
+    if (this.quantity > 0) {
+      const produto: Produto = {
+        id: this.product.id,
+        nome: this.product.name,
+        imagem: this.product.image,
+        preco: this.product.price,
+        quantidade: this.quantity,
+        cor: this.product.color
+      };
+
+      this.carrinhoService.adicionar(produto);
+      this.quantity = 0; // Resetar após adicionar, opcional
+      alert('Produto adicionado ao carrinho!');
+    }
+  }
 
   formatPrice(value: number): string {
     return `R$ ${value.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;

@@ -91,6 +91,9 @@
             />
           </svg>
         </button>
+        <button class="product-details__cart-add" (click)="adicionarAoCarrinho()">
+           Adicionar ao Carrinho
+        </button>
         <span class="product-details__cart-counter-count">{{ quantity }}</span>
         <button class="product-details__cart-counter-button plus" (click)="increaseQuantity()">
           <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
