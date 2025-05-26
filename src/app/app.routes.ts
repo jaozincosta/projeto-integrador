@@ -5,6 +5,7 @@ import { RegistrarComponent } from './shared/registrar/registrar.component';
 import { PagamentoComponent } from './shared/pagamento/pagamento.component';
 import { FavoritosComponent } from './shared/favoritos/favoritos.component';
 import { ProdutostenisComponent } from './shared/produtostenis/produtostenis.component';
+import { CarrinhoComponent } from './shared/carrinho/carrinho.component';
 
 export const routes: Routes = [
   { path: 'entrar', component: LoginComponent },
@@ -13,4 +14,6 @@ export const routes: Routes = [
   { path: 'favoritos', component: FavoritosComponent },
   { path: 'pagamento', component: PagamentoComponent },
   { path: 'produtostenis/:genero', component: ProdutostenisComponent },
+  { path: 'carrinho', component: CarrinhoComponent },
+
 ];

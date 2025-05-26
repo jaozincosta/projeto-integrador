@@ -1,18 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../services/carrinho.service';
-import { Produto } from '../card-produto/card-produto.component';
+import { Produto } from '../../services/types/types'; // ajuste para o tipo correto
 
 @Component({
   selector: 'app-carrinho',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './carrinho.component.html',
-  styleUrls: ['./carrinho.component.scss']
+  styleUrls: ['./carrinho.component.css'],
 })
-export class CarrinhoComponent {
-carrinho: any;
-  constructor(public carrinhoService: CarrinhoService) {}
+export class CarrinhoComponent implements OnInit {
+  carrinho: Produto[] = [];
+  total: number = 0;
+
+  constructor(private carrinhoService: CarrinhoService) {}
+
+  ngOnInit(): void {
+    this.carrinhoService.getItens().subscribe((itens) => {
+      this.carrinho = itens;
+    });
+
+    this.carrinhoService.getTotal().subscribe((valor) => {
+      this.total = valor;
+    });
+  }
 
   alterarQuantidade(id: number, delta: number): void {
     this.carrinhoService.alterarQuantidade(id, delta);
@@ -27,11 +39,7 @@ carrinho: any;
     alert('Compra finalizada com sucesso!');
   }
 
-  // get carrinho() {
-  //   return this.carrinhoService.;
-  // }
-
-  get total() {
-    return this.carrinhoService.total;
+  trackById(index: number, item: Produto): number {
+    return item.id;
   }
 }

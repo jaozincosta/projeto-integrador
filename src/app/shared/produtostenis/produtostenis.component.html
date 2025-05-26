@@ -1,17 +1,28 @@
 <app-header> </app-header>
-    <div class="principal2">
-        @for (item of produtostenis; track item.id) {
-        <div class="cardfavorito">
-            <img [src]="item.imagem" alt="{{ item.nome }}" />
-            <h3>{{ item.nome }}</h3>
-            <p class="avaliacao">{{ item.avaliacao }}</p>
-            <p>
-                <s><span class="preco_antigo">R$ {{ item.preco_antigo | number:'1.2-2' }}</span></s>
-                <span>  Por  </span>
-                <span class="preco">R$ {{ item.preco| number:'1.2-2' }}</span>
-            </p>
-            <button class="botao" (click)="adicionarAosFavoritos(item)">Adicionar aos Favoritos</button>
-            <button class="carrinho">Adicionar ao carrinho</button>
-        </div>
-        }
-    </div>
+
+<div class="principal2">
+  @for (item of produtostenis; track item.id) {
+  <div class="cardfavorito">
+    <img [src]="item.imagem" alt="{{ item.nome }}" />
+    <h3>{{ item.nome }}</h3>
+    <p class="avaliacao">{{ item.avaliacao }}</p>
+    <p>
+      <s>
+        <span class="preco_antigo">
+          R$ {{ item.preco_antigo | number : "1.2-2" }}
+        </span>
+      </s>
+      <span> Por </span>
+      <span class="preco">R$ {{ item.preco | number : "1.2-2" }}</span>
+    </p>
+
+    <button class="botao" (click)="adicionarAosFavoritos(item)">
+      Adicionar aos Favoritos
+    </button>
+
+    <button class="carrinho" (click)="adicionarAoCarrinho(item)">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+  }
+</div>

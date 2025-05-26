@@ -44,6 +44,7 @@ export class AppComponent {
     '/favoritos',
     '/pagamento',
     '/produtostenis',
+    '/carrinho'
   ];
 
   mostrarLayout = true;
