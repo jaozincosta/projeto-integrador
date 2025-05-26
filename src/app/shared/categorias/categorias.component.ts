@@ -10,12 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class CategoriasComponent {
   categorias = [
-    { nome: 'Tênis', imagem: 'assets/img/.png' },
-    { nome: 'Masculino', imagem: 'assets/img/.png' },
-    { nome: 'Feminino', imagem: 'assets/img/.png' },
-    { nome: 'Infantil', imagem: 'assets/img/.png' },
-    { nome: 'Esporte', imagem: 'assets/img/.png' },
-    { nome: 'Casual', imagem: 'assets/img/.png' },
-    { nome: 'Social', imagem: 'assets/img/.png' },
+    { nome: 'Tênis', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Masculino', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Feminino', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Infantil', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Esporte', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Casual', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Social', imagem: 'assets/img/tenisnike.png' },
   ];
 }

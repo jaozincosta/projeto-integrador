@@ -9,10 +9,9 @@ import { Produto } from './types/types';
 export class ProdutosService {
   private readonly API_PRODUTOS = 'http://localhost:3000/produtos';
   private readonly API_FAVORITOS = 'http://localhost:3000/favoritos';
+  private readonly API_USUARIOS = 'http://localhost:3000/usuarios';
 
   constructor(private http: HttpClient) {}
-
-  // === PRODUTOS ===
 
   listar(): Observable<Produto[]> {
     return this.http.get<Produto[]>(this.API_PRODUTOS);
@@ -38,7 +37,21 @@ export class ProdutosService {
     return this.http.get<Produto[]>(this.API_FAVORITOS);
   }
 
+  adicionarAosFavoritos(produto: Produto): Observable<Produto> {
+    return this.http.post<Produto>(this.API_FAVORITOS, produto);
+  }
+
   removerFavorito(id: number): Observable<void> {
     return this.http.delete<void>(`${this.API_FAVORITOS}/${id}`);
+  }
+
+  verificarUsuario(username: string, senha: string): Observable<any[]> {
+    return this.http.get<any[]>(
+      `${this.API_USUARIOS}?username=${username}&senha=${senha}`
+    );
+  }
+
+  criarConta(usuario: any): Observable<any> {
+    return this.http.post<any>(this.API_USUARIOS, usuario);
   }
 }
