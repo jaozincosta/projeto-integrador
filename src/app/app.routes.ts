@@ -16,8 +16,6 @@ export const routes: Routes = [
   { path: 'pagamento', component: PagamentoComponent },
   { path: 'produtostenis/:genero', component: ProdutostenisComponent },
   { path: 'carrinho', component: CarrinhoComponent },
-
-  { path: 'produto', component: ProductComponent },
-  { path: 'produtostenis/:genero', component: ProdutostenisComponent }
+  { path: 'produto', component: ProductComponent }
 ];
 

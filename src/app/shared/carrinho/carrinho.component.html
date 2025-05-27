@@ -23,9 +23,9 @@
         <td>{{ item.quantidade }}</td>
         <td>R$ {{ item.preco * item.quantidade | number : "1.2-2" }}</td>
         <td>
-          <button (click)="alterarQuantidade(item.id, 1)">+</button>
-          <button (click)="alterarQuantidade(item.id, -1)">-</button>
-          <button (click)="removerItem(item.id)">Remover</button>
+          <button (click)="alterarQuantidade(item.id!, 1)">+</button>
+          <button (click)="alterarQuantidade(item.id!, -1)">-</button>
+          <button (click)="removerItem(item.id!)">Remover</button>
         </td>
       </tr>
     </tbody>

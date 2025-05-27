@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { ProdutosService } from '../../services/produtos.service';
 import { CarrinhoService } from '../../services/carrinho.service';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-produtostenis',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, RouterModule],
+  imports: [CommonModule, HeaderComponent, RouterModule, FooterComponent],
   templateUrl: './produtostenis.component.html',
   styleUrls: ['./produtostenis.component.css'],
 })
