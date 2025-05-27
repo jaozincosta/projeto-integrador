@@ -49,6 +49,6 @@ export class CarrinhoComponent implements OnInit {
   }
 
   trackById(index: number, item: Produto): number {
-    return item.id;
+    return item.id!;
   }
 }

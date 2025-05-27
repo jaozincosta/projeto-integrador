@@ -15,11 +15,11 @@ button {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
-    gap: 13px; 
-    max-height: 80vh; 
+    gap: 13px;  
     padding: 16px;
     gap: 40px;
     margin: solid 2px black;
+    margin-block-end: 4%;
 }
 
 .cardfavorito {
@@ -40,5 +40,16 @@ button {
 
 .avaliacao{
     font-size: 1.5rem;
+}
+
+.mensagem {
+  text-align: center;
+  background-color: orange;
+  margin-top: 4px;
+  font-size: 18px;
+  padding: 1px 0;
+  border: solid 1px black;
+  line-height: 0.9px;
+  box-sizing: border-box;
 }
 

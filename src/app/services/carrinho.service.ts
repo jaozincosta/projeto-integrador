@@ -49,8 +49,8 @@ export class CarrinhoService {
     return of();
   }
 
-  remover(id: number): Observable<void> {
-    this.carrinho = this.carrinho.filter(p => p.id !== id);
+  remover(id?: number): Observable<void> {
+    this.carrinho = this.carrinho.filter(p => p.id !== id!);
     this.atualizarCarrinho();
     return of();
   }

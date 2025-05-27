@@ -48,7 +48,7 @@ export class ManutencaoComponent implements OnInit {
 
   editar(produto: Produto): void {
     this.novoProduto = { ...produto };
-    this.editandoId = produto.id;
+    this.editandoId = produto.id!;
   }
 
   excluir(id: number): void {
@@ -63,7 +63,6 @@ export class ManutencaoComponent implements OnInit {
 
   resetProduto(): Produto {
     return {
-      id: 0,
       nome: '',
       descricao: '',
       preco: 0,
