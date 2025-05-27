@@ -1,5 +1,15 @@
 <app-header> </app-header>
 
+<div class="mensagem">
+  @if (genero === 'feminino') {
+    <h2>Produtos Femininos</h2>
+  } @else if (genero === 'masculino') {
+    <h2>Produtos Masculinos</h2>
+  } @else if (genero === 'infantil') {
+    <h2>Produtos Infantis</h2>
+  }
+</div>
+
 <div class="principal2">
   @for (item of produtostenis; track item.id) {
   <div class="cardfavorito">
@@ -26,3 +36,5 @@
   </div>
   }
 </div>
+
+<app-footer> </app-footer>
