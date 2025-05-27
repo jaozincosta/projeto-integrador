@@ -45,7 +45,7 @@
       "imagem": "assets/img/tenis7.png"
     },
     {
-      "id": 0,
+      "id": "0",
       "nome": "1",
       "descricao": "dsdsds",
       "preco": 23,
@@ -63,7 +63,7 @@
       "quantidade": 1
     },
     {
-      "id": 0,
+      "id": "0",
       "nome": "Tenis Air Force 1",
       "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 1000,
@@ -79,20 +79,27 @@
       "freteGratis": false,
       "estrelas": 0,
       "quantidade": 1
+    },
+    {
+      "id": 0,
+      "nome": "",
+      "descricao": "",
+      "preco": 0,
+      "precoOriginal": 0,
+      "precoAtual": 0,
+      "preco_antigo": 0,
+      "avaliacao": "",
+      "genero": "",
+      "estoque": 0,
+      "imagem": "",
+      "parcelas": "",
+      "desconto": 0,
+      "freteGratis": false,
+      "estrelas": 0,
+      "quantidade": 1
     }
   ],
   "favoritos": [
-    {
-      "id": "1",
-      "nome": "Tenis Air force",
-      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
-      "preco": 999.99,
-      "preco_antigo": 200,
-      "avaliacao": " ★ ★ ★ ★ ★",
-      "genero": "feminino",
-      "estoque": 12,
-      "imagem": "assets/img/tenis7.png"
-    },
     {
       "id": "5",
       "nome": "Tenis Air force",
@@ -105,7 +112,7 @@
       "imagem": "assets/img/tenis7.png"
     },
     {
-      "id": "6",
+      "id": "5",
       "nome": "Tenis Air force",
       "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
