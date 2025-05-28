@@ -2,18 +2,18 @@
 
 <div class="mensagem">
   @if (genero === 'feminino') {
-    <h2>Produtos Femininos</h2>
+  <h2>Produtos Femininos</h2>
   } @else if (genero === 'masculino') {
-    <h2>Produtos Masculinos</h2>
+  <h2>Produtos Masculinos</h2>
   } @else if (genero === 'infantil') {
-    <h2>Produtos Infantis</h2>
+  <h2>Produtos Infantis</h2>
   }
 </div>
 
 <div class="principal2">
   @for (item of produtostenis; track item.id) {
   <div class="cardfavorito">
-    <img [src]="item.imagem" alt="{{ item.nome }}" />
+    <img [src]="item.imagem" alt="{{ item.nome }}" class="imagem_produto" />
     <h3>{{ item.nome }}</h3>
     <p class="avaliacao">{{ item.avaliacao }}</p>
     <p>
@@ -25,14 +25,15 @@
       <span> Por </span>
       <span class="preco">R$ {{ item.preco | number : "1.2-2" }}</span>
     </p>
+    <div class="botoes">
+      <button class="botao" (click)="adicionarAosFavoritos(item)">
+        Adicionar aos Favoritos
+      </button>
 
-    <button class="botao" (click)="adicionarAosFavoritos(item)">
-      Adicionar aos Favoritos
-    </button>
-
-    <button class="carrinho" (click)="adicionarAoCarrinho(item)">
-      Adicionar ao Carrinho
-    </button>
+      <button class="carrinho" (click)="adicionarAoCarrinho(item)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
   </div>
   }
 </div>

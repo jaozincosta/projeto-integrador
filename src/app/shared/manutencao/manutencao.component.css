@@ -41,9 +41,10 @@
 }
 
 form {
+  flex: 2; /* ocupa mais espaço */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
 }
 
 input {
@@ -92,6 +93,47 @@ th {
 td button {
   margin-right: 0.5rem;
 }
+
 .excluir {
   background-color: red;
+}
+
+.imagem_miniatura {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-e-imagem {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.preview-imagem {
+  flex: 1;
+}
+
+.preview-imagem img {
+  width: 80%;
+  height: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.estilo {
+  color: #818080;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.estilo:valid:not([value=""]) {
+  color: #000; 
 }

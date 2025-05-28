@@ -5,6 +5,7 @@
 <section class="manutencao-container">
   <h1>Manutenção de Produtos</h1>
 
+  <div class="form-e-imagem">
   <form (ngSubmit)="adicionarOuAtualizarProduto()" #form="ngForm">
     <input
       type="text"
@@ -34,20 +35,17 @@
       placeholder="Preço antigo"
       required
     />
-    <input
-      type="text"
-      name="avaliacao"
-      [(ngModel)]="novoProduto.avaliacao"
-      placeholder="Avaliacao"
-      required
-    />
-    <input
-      type="text"
-      name="genero"
-      [(ngModel)]="novoProduto.genero"
-      placeholder="Genero"
-      required
-    />
+    <select
+    class="estilo"
+    name="genero"
+    [(ngModel)]="novoProduto.genero"
+    required
+    >
+    <option value="" disabled selected>Gênero</option>
+    <option value="masculino">Masculino</option>
+    <option value="feminino">Feminino</option>
+    <option value="infantil">Infantil</option>
+    </select>
     <input
       type="number"
       name="estoque"
@@ -67,6 +65,17 @@
       {{ editandoId ? "Atualizar" : "Adicionar" }}
     </button>
   </form>
+  
+  <div class="preview-imagem">
+      <h4>Imagem</h4>
+      <img
+        *ngIf="novoProduto.imagem"
+        [src]="novoProduto.imagem"
+        alt="Prévia da imagem"
+      />
+    </div>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -93,7 +102,7 @@
         <td>{{ produto.avaliacao }}</td>
         <td>{{ produto.genero }}</td>
         <td>{{ produto.estoque }}</td>
-        <td>{{ produto.imagem }}</td>
+        <td><img [src]="produto.imagem" alt="Imagem do produto" class="imagem_miniatura" /></td>
         <td>
           <button (click)="editar(produto)">Editar</button>
           <button class="excluir" (click)="excluir(produto.id!)">

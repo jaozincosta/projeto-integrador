@@ -21,7 +21,7 @@
         <td>{{ item.nome }}</td>
         <td>R$ {{ item.preco | number : "1.2-2" }}</td>
         <td>{{ item.quantidade }}</td>
-        <td>R$ {{ item.preco * item.quantidade | number : "1.2-2" }}</td>
+        <td>R$ {{ (item.preco ?? 0) * item.quantidade | number : "1.2-2" }}</td>
         <td>
           <button (click)="alterarQuantidade(item.id!, 1)">+</button>
           <button (click)="alterarQuantidade(item.id!, -1)">-</button>
