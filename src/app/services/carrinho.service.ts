@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Produto } from './types/types';
 
+
 @Injectable({
   providedIn: 'root',
 })
