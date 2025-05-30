@@ -1,7 +1,5 @@
-
 button {
     background-color: #007bff;
-    margin-left: 2%;
     color: white;
     border: none;
     padding: 10px 16px;
@@ -11,12 +9,18 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
 .principal2 {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 13px;  
-    padding: 16px;
+    padding: 18px;
     gap: 40px;
     margin: solid 2px black;
     margin-block-end: 4%;
@@ -28,28 +32,35 @@ button {
     padding: 20px;
     box-sizing: border-box;
 }
-.botao-remover{
+
+.botao-remover {
     background-color: red;
     margin-left: 42%;
 }
 
-.carrinho{
+.carrinho {
     background-color: orange;
     border: solid 1px black;
 }
 
-.avaliacao{
+.avaliacao {
     font-size: 1.5rem;
 }
 
 .mensagem {
-  text-align: center;
-  background-color: orange;
-  margin-top: 4px;
-  font-size: 18px;
-  padding: 1px 0;
-  border: solid 1px black;
-  line-height: 0.9px;
-  box-sizing: border-box;
+    text-align: center;
+    background-color: orange;
+    margin-top: 4px;
+    font-size: 18px;
+    padding: 1px 0;
+    border: solid 1px black;
+    line-height: 0.9px;
+    box-sizing: border-box;
 }
 
+.imagem_produto {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}

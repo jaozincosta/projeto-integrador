@@ -2,18 +2,18 @@ export interface Produto {
   quantidade: number;
   id?: number;
   nome: string;
-  preco: number;
-  estoque: number;
+  preco: number | null;
+  estoque: number | null;
   descricao: string;
-  preco_antigo: number;
+  preco_antigo: number | null;
   avaliacao: string;
   genero: string;
   imagem: string;
 
-  precoOriginal?: number;
-  precoAtual?: number;
+  precoOriginal?: number | null;
+  precoAtual?: number | null;
   parcelas?: string;
-  desconto?: number;
+  desconto?: number | null;
   freteGratis?: boolean;
-  estrelas?: number;
+  estrelas?: number | null;
 }

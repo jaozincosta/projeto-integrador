@@ -8,7 +8,7 @@
 
   @for (item of favoritos; track item.id) {
     <div class="cardfavorito">
-      <img [src]="item.imagem" alt="{{ item.nome }}" />
+      <img [src]="item.imagem" alt="{{ item.nome }}" class="imagem_produto" />
       <h3>{{ item.nome }}</h3>
       <p>{{ item.preco }}</p>
       <button class="botao">Adicionar ao carrinho</button>

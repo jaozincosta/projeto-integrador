@@ -1,72 +1,73 @@
-.card {
-  position: relative;
-  width: 100%;
-  max-width: 260px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transition: transform 0.2s ease;
+.promocao {
+  text-align: center;
+  font-weight: bold;
+  margin: 40px 0 20px 0;
+  color: #333;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 2rem;
+.principal2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 18px;
+    gap: 40px;
+    margin-block-end: 4%;
 }
 
-.card:hover {
-  transform: scale(1.02);
+.cardfavorito:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.imagem-produto {
+.cardfavorito {
+  width: 200px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px; 
+  background-color: #fff;
+  word-wrap: break-word;
+}
+
+.mensagem {
+    text-align: center;
+    background-color: orange;
+    margin-top: 4px;
+    font-size: 18px;
+    padding: 1px 0;
+    border: solid 1px black;
+    line-height: 0.9px;
+    box-sizing: border-box;
+}
+
+.imagem_produto {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.desconto-label {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background-color: #d3ff00;
-  color: #000;
-  font-weight: bold;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  border-radius: 4px;
+.preco_antigo{
+  color: #838080;
 }
 
-.info h2 {
-  font-size: 1rem;
-  margin: 0;
+.frete{
+  color: #2ac90a;
 }
 
-.preco-original {
-  text-decoration: line-through;
-  color: #999;
+.preco, .preco_antigo, .frete {
   font-size: 0.9rem;
+  word-break: break-word;
 }
 
-.preco-atual {
-  font-weight: bold;
-  color: #000;
-  font-size: 1.2rem;
-}
-
-.parcelas {
-  font-size: 0.85rem;
-  color: #555;
-}
-
-.frete {
-  color: green;
-  font-size: 0.85rem;
+.desconto {
+  background-color: #2bff00;
+  text-align: left;
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px;
+  margin-left: auto;
   font-weight: bold;
 }
+

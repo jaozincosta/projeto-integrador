@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../services/carrinho.service';
 import { Produto } from '../../services/types/types';
 import { Observable } from 'rxjs';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-carrinho',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './carrinho.component.html',
   styleUrls: ['./carrinho.component.css'],
 })
