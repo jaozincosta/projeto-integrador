@@ -45,9 +45,27 @@
       "imagem": "data:image/jpeg;base64,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"
     },
     {
-      "id": "9ac5",
-      "nome": "Tenis ultra Energy",
-      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto excepcional. Com cabedal resistente, único robusto e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e inconvenientes.",
+      "id": "0",
+      "nome": "1",
+      "descricao": "dsdsds",
+      "preco": 23,
+      "precoOriginal": 0,
+      "precoAtual": 0,
+      "preco_antigo": 12,
+      "avaliacao": "23ewe",
+      "genero": "sla",
+      "estoque": 2,
+      "imagem": "12333",
+      "parcelas": "",
+      "desconto": 0,
+      "freteGratis": false,
+      "estrelas": 0,
+      "quantidade": 1
+    },
+    {
+      "id": "0",
+      "nome": "Tenis Air Force 1",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 1000,
       "precoOriginal": 0,
       "precoAtual": 0,
@@ -63,33 +81,18 @@
       "quantidade": 1
     },
     {
-      "id": "a567",
-      "nome": "produtoteste",
-      "descricao": "testando",
-      "preco": 1045,
-      "precoOriginal": null,
-      "precoAtual": null,
-      "preco_antigo": 900,
-      "avaliacao": "★ ★ ★ ",
-      "genero": "feminino",
-      "estoque": 67,
-      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvfu3ANux_hDj6A9YQkosooql_dwG-D5mPKQ&s",
-      "parcelas": "",
-      "desconto": null,
-      "freteGratis": false,
-      "estrelas": null,
       "quantidade": 1
     }
   ],
   "favoritos": [
     {
-      "id": "1",
+      "id": "5",
       "nome": "Tenis Air force",
       "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
       "preco": 999.99,
       "preco_antigo": 200,
       "avaliacao": " ★ ★ ★ ★ ★",
-      "genero": "feminino",
+      "genero": "masculino",
       "estoque": 12,
       "imagem": "assets/img/tenis7.png"
     },
@@ -105,22 +108,15 @@
       "imagem": "assets/img/tenis7.png"
     },
     {
-      "id": "9ac5",
-      "nome": "Tenis ultra Energy",
-      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto excepcional. Com cabedal resistente, único robusto e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e inconvenientes.",
-      "preco": 1000,
-      "precoOriginal": 0,
-      "precoAtual": 0,
-      "preco_antigo": 2000,
-      "avaliacao": "★ ★ ★ ★ ",
-      "genero": "feminino",
-      "estoque": 20,
-      "imagem": "assets/img/tenis8.png",
-      "parcelas": "",
-      "desconto": 0,
-      "freteGratis": false,
-      "estrelas": 0,
-      "quantidade": 1
+      "id": "6",
+      "nome": "Tenis Air force",
+      "descricao": "Clássico e versátil, o Nike Air Force 1 combina design atemporal com conforto incomparável. Com cabedal resistente, sola robusta e a famosa tecnologia Nike Air, é perfeito tanto para o dia a dia quanto para compor looks estilosos. Modelo em excelente estado (ou novo, se for o caso), ideal para quem busca qualidade e autenticidade.",
+      "preco": 999.99,
+      "preco_antigo": 200,
+      "avaliacao": " ★ ★ ★ ★ ★",
+      "genero": "masculino",
+      "estoque": 12,
+      "imagem": "assets/img/tenis7.png"
     }
   ],
   "usuarios": [
