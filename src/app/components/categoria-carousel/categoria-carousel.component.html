@@ -1,0 +1,15 @@
+<h2 class="titulo">NAVEGUE PELA SUA CATEGORIA PREFERIDA</h2>
+
+<div class="carousel-wrapper">
+  <button class="seta esquerda" (click)="scrollEsquerda()">❮</button>
+
+  <div class="carousel-container" #carousel>
+    <div class="categoria-card" *ngFor="let categoria of categorias">
+      <img [src]="categoria.imagem" [alt]="categoria.nome" class="categoria-img" />
+      <h3>{{ categoria.nome }}</h3>
+      <a [routerLink]="categoria.link" class="btn-ver">Ver Produtos</a>
+    </div>
+  </div>
+
+  <button class="seta direita" (click)="scrollDireita()">❯</button>
+</div>

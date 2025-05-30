@@ -8,6 +8,7 @@ import { ProdutostenisComponent } from './shared/card-produto/card-produto.compo
 import { CategoriasComponent } from './shared/categorias/categorias.component';
 import { MaisVendidosComponent } from './shared/mais-vendidos/mais-vendidos.component';
 import { NgIf } from '@angular/common';
+import { CategoriaCarouselComponent } from './components/categoria-carousel/categoria-carousel.component';
 
 interface Produto {
   id: number;
@@ -31,12 +32,16 @@ interface Produto {
     FooterComponent,
     CategoriasComponent,
     MaisVendidosComponent,
-    ProdutostenisComponent
+    ProdutostenisComponent,
+    CategoriaCarouselComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   private rotasEscondidas = [
     '/entrar',
     '/manutencao',
