@@ -45,10 +45,8 @@ export class ProdutosService {
     return this.http.delete<void>(`${this.API_FAVORITOS}/${id}`);
   }
 
-  verificarUsuario(username: string, senha: string): Observable<any[]> {
-    return this.http.get<any[]>(
-      `${this.API_USUARIOS}?username=${username}&senha=${senha}`
-    );
+  verificarUsuario(usuario: string, senha: string): Observable<any[]> {
+  return this.http.get<any[]>(`${this.API_USUARIOS}?usuario=${usuario}&senha=${senha}`);
   }
 
   criarConta(usuario: any): Observable<any> {

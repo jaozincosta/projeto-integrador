@@ -14,8 +14,8 @@
 
 <div class="boxLogin">
   <h2>Login</h2>
-  <form (submit)="onSubmit(); $event.preventDefault()">
-    <input type="text" class="input-box" placeholder="Usuário" required [(ngModel)]="username" name="username" />
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <input type="text" class="input-box" placeholder="Usuário" required [(ngModel)]="usuario" name="usuario" />
     <input type="password" class="input-box" placeholder="Senha" required [(ngModel)]="password" name="password" />
     <button type="submit" class="btn">Login</button>
     <br />

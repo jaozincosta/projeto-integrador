@@ -9,7 +9,6 @@ import { ProdutosService } from '../../services/produtos.service';
   selector: 'app-registrar',
   standalone: true,
   imports: [RouterModule, CommonModule, FormsModule],
-  providers: [Router],
   templateUrl: './registrar.component.html',
   styleUrls: ['./registrar.component.css'],
 })
@@ -24,7 +23,6 @@ export class RegistrarComponent {
 
   onSubmit(form: NgForm) {
   if (form.invalid) {
-    this.errorMsg = 'Preencha todos os campos corretamente.';
     return;
   }
 
