@@ -8,7 +8,7 @@ import { ProdutostenisComponent } from './shared/card-produto/card-produto.compo
 import { CategoriasComponent } from './shared/categorias/categorias.component';
 import { MaisVendidosComponent } from './shared/mais-vendidos/mais-vendidos.component';
 import { NgIf } from '@angular/common';
-import { CategoriaCarouselComponent } from './components/categoria-carousel/categoria-carousel.component';
+import { CategoriaCarouselComponent } from './shared/categoria-carousel/categoria-carousel.component';
 
 interface Produto {
   id: number;
