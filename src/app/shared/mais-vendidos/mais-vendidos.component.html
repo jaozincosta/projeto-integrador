@@ -1,36 +1,25 @@
-<section class="mais-vendidos-container">
-  <h2 class="titulo">Os mais vendidos!</h2>
-  <div class="lista-produtos">
-    <div class="card-produto" *ngFor="let p of produtos">
-      <img [src]="p.imagem" [alt]="p.nome" class="imagem" />
+<div class="geral">
+<h1 class="promocao">Os mais vendidos</h1>
 
-      <div *ngIf="p.desconto > 0" class="desconto">-{{ p.desconto }}% OFF</div>
-
-      <h3>{{ p.nome }}</h3>
-
-      <div class="estrelas">
-        <span *ngFor="let _ of [].constructor(5)">
-          <img
-            src="assets/img/star.svg"
-            class="estrela"
-            [class.inativa]="p.estrelas < _ + 1"
-          />
-        </span>
-      </div>
-
-      <p class="preco-antigo" *ngIf="p.desconto > 0">
-        R$ {{ p.precoOriginal | number : "1.2-2" }}
+<div class="principal2">
+  @for (item of produtostenis; track item.id) {
+    
+    <div class="cardfavorito">
+      <img [src]="item.imagem" alt="{{ item.nome }}" class="imagem_produto" />
+      <p class="desconto">
+      {{ calcularDesconto(item.preco_antigo, item.preco) }}% OFF
       </p>
-
-      <p class="preco-atual">R$ {{ p.precoAtual | number : "1.2-2" }}</p>
-
-      <p class="parcelas">{{ p.parcelas }}</p>
-
-      <button class="botao">PROTEGIDOS</button>
-
-      <span *ngIf="p.freteGratis" class="frete">Frete grátis</span>
-
-      
+      <h3>{{ item.nome }}</h3>
+          <s>
+          <p  class="preco_antigo">
+            R$ {{ item.preco_antigo | number : '1.2-2' }}
+          </p>
+          </s>
+        
+        <p class="preco">R$ {{ item.preco | number : '1.2-2' }}</p>
+        
+      <p class="frete">Frete grátis</p>
     </div>
-  </div>
-</section>
+  }
+</div>
+</div>
