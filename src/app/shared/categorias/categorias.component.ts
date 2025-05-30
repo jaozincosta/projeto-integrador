@@ -11,8 +11,8 @@ import { RouterLink } from '@angular/router';
 })
 export class CategoriasComponent {
   categorias = [
-    { nome: 'masculino', imagem: 'assets/img/tenisnike.png' },
-    { nome: 'feminino', imagem: 'assets/img/tenis6.png' },
-    { nome: 'infantil', imagem: 'assets/img/tenis12.png' }
+    { nome: 'Masculino', imagem: 'assets/img/tenisnike.png' },
+    { nome: 'Feminino', imagem: 'assets/img/tenis6.png' },
+    { nome: 'Infantil', imagem: 'assets/img/tenis12.png' }
   ];
 }
