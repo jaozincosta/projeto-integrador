@@ -13,6 +13,6 @@ export class CategoriasComponent {
   categorias = [
     { nome: 'masculino', imagem: 'assets/img/tenisnike.png' },
     { nome: 'feminino', imagem: 'assets/img/tenis6.png' },
-    { nome: 'infantil', imagem: 'assets/img/tenis7.png' }
+    { nome: 'infantil', imagem: 'assets/img/tenis12.png' }
   ];
 }

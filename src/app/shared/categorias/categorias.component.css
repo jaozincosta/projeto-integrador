@@ -1,16 +1,16 @@
 .categorias-container {
   width: 100%;
-  padding: 1rem;
   text-align: center;
 }
 
 .titulo {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .categorias-lista {
+  background-color: rgba(0, 0, 0, 0.103);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -26,8 +26,8 @@
 }
 
 .circulo {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #ffab6a;
   display: flex;
@@ -37,13 +37,24 @@
 }
 
 .circulo img {
-  width: 60px;
+  width: 150px;
   height: auto;
   object-fit: contain;
 }
 
 .categoria-item p {
+  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   margin: 0;
 }
+a ,a:hover,a:focus,a:active{
+  text-decoration: none;
+  
+}
+
+.aleatorio {
+  color: black;
+  text-decoration: none;
+}
+

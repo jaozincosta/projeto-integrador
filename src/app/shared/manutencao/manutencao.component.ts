@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { CommonModule, NgFor } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProdutosService } from '../../services/produtos.service';
 import { Produto } from '../../services/types/types';
@@ -16,6 +16,7 @@ export class ManutencaoComponent implements OnInit {
   produtos: Produto[] = [];
   novoProduto: Produto = this.resetProduto();
   editandoId: number | null = null;
+  formSubmitAttempted: boolean | undefined;
 
   constructor(private produtosService: ProdutosService) {}
 
@@ -23,13 +24,18 @@ export class ManutencaoComponent implements OnInit {
     this.carregarProdutos();
   }
 
+
+
   carregarProdutos(): void {
     this.produtosService.listar().subscribe((data) => {
       this.produtos = data;
     });
   }
 
-  adicionarOuAtualizarProduto(): void {
+  adicionarOuAtualizarProduto(form: NgForm): void {
+    this.formSubmitAttempted = true;
+    
+    if (form.invalid) return;
     if (this.editandoId !== null) {
       this.produtosService
         .atualizar(this.editandoId, this.novoProduto)
@@ -37,11 +43,13 @@ export class ManutencaoComponent implements OnInit {
           this.carregarProdutos();
           this.novoProduto = this.resetProduto();
           this.editandoId = null;
+          this.formSubmitAttempted = false;
         });
     } else {
       this.produtosService.criar(this.novoProduto).subscribe(() => {
         this.carregarProdutos();
         this.novoProduto = this.resetProduto();
+        this.formSubmitAttempted = false;
       });
     }
   }

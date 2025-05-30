@@ -1,97 +1,71 @@
-.mais-vendidos-container {
-  padding: 2rem;
+.principal2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 18px;
+    gap: 40px;
+    margin-block-end: 4%;
 }
 
-.titulo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+.cardfavorito {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.lista-produtos {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
+.mensagem {
+    text-align: center;
+    background-color: orange;
+    margin-top: 4px;
+    font-size: 18px;
+    padding: 1px 0;
+    border: solid 1px black;
+    line-height: 0.9px;
+    box-sizing: border-box;
 }
 
-.card-produto {
-  min-width: 180px;
-  background: white;
-  border-radius: 8px;
-  padding: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-  font-size: 0.85rem;
+.cardfavorito:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.imagem {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
+.imagem_produto {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
+
+.preco_antigo{
+  color: #838080;
+}
+
+.frete{
+  color: #2ac90a;
+}
+
+.preco, .preco_antigo, .frete {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
 
 .desconto {
-  background-color: #d3ff00;
-  font-weight: bold;
-  padding: 0.25rem;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 0.9rem;
-  margin: 0.4rem 0;
-}
-
-.estrelas {
-  margin-bottom: 0.5rem;
-}
-
-.estrela {
-  width: 16px;
-  height: 16px;
-}
-
-.estrela.inativa {
-  opacity: 0.3;
-}
-
-.preco-antigo {
-  text-decoration: line-through;
-  color: gray;
-  font-size: 0.9rem;
-}
-
-.preco-atual {
-  font-weight: bold;
-  color: black;
-  font-size: 1.2rem;
-}
-
-.preco-atual {
-  font-size: 1rem;
-}
-
-.botao {
-  margin-top: 0.5rem;
-  padding: 0.4rem 1rem;
-  font-size: 0.75rem;
-  border: 1px solid black;
-  background: white;
-  cursor: pointer;
-}
-
-.frete {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-  color: green;
+  background-color: #39FF14;
+  text-align: left;
+  font-size: 18px;
+  padding: 5px;
+  margin-left: auto;
   font-weight: bold;
 }
 
-.enviado {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: #444;
+.promocao {
+  text-align: center;
+  font-weight: bold;
+  margin: 100px 0px 0px 0px;
+  color: #000;
+}
+
+.geral{
+  margin-top: 10px;
 }
